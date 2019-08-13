@@ -28,18 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.WelcomeLabel = new System.Windows.Forms.Label();
+            this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // WelcomeLabel
             // 
             this.WelcomeLabel.AutoSize = true;
             this.WelcomeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.WelcomeLabel.Location = new System.Drawing.Point(172, 276);
+            this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeLabel.Location = new System.Drawing.Point(141, 272);
             this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(271, 24);
+            this.WelcomeLabel.Size = new System.Drawing.Size(347, 29);
             this.WelcomeLabel.TabIndex = 0;
             this.WelcomeLabel.Text = "Welcome to Dollar Computers!!";
+            // 
+            // SplashTimer
+            // 
+            this.SplashTimer.Interval = 3000;
+            this.SplashTimer.Tick += new System.EventHandler(this.SplashTimer_Tick);
             // 
             // SplashScreenForm
             // 
@@ -61,6 +69,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartForm";
+            this.Load += new System.EventHandler(this.SplashScreenForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,5 +78,6 @@
         #endregion
 
         private System.Windows.Forms.Label WelcomeLabel;
+        private System.Windows.Forms.Timer SplashTimer;
     }
 }

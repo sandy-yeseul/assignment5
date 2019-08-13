@@ -16,5 +16,27 @@ namespace assignment5
         {
             InitializeComponent();
         }
+
+        private void StartForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void NewOrderButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.selectForm.Show();
+        }
+
+        private void SavedOrderButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.productForm.Show();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

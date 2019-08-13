@@ -16,5 +16,17 @@ namespace assignment5
         {
             InitializeComponent();
         }
+
+        private void SplashScreenForm_Load(object sender, EventArgs e)
+        {
+            SplashTimer.Enabled = true;
+        }
+
+        private void SplashTimer_Tick(object sender, EventArgs e)
+        {
+            SplashTimer.Enabled = false;
+            this.Hide();
+            Program.startForm.Show();
+        }
     }
 }

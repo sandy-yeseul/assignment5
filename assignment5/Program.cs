@@ -23,7 +23,12 @@ namespace assignment5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            splashScreen = new SplashScreenForm();
+            startForm = new StartForm();
+            selectForm = new SelectForm();
+            productForm = new ProductForm();
+            orderForm = new OrderForm();
+            Application.Run(splashScreen);
         }
     }
 }
