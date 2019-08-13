@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Yeseul Kang #301029474
+ * Created on August 13
+ * Program page
+ */
 namespace assignment5
 {
     static class Program
