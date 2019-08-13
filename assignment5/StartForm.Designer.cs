@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.NewOrderButton = new System.Windows.Forms.Button();
             this.SavedOrderButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -37,17 +38,17 @@
             // 
             // NewOrderButton
             // 
-            this.NewOrderButton.Location = new System.Drawing.Point(243, 423);
+            this.NewOrderButton.Location = new System.Drawing.Point(243, 383);
             this.NewOrderButton.Name = "NewOrderButton";
-            this.NewOrderButton.Size = new System.Drawing.Size(249, 35);
+            this.NewOrderButton.Size = new System.Drawing.Size(253, 35);
             this.NewOrderButton.TabIndex = 0;
-            this.NewOrderButton.Text = "Start a new order here";
+            this.NewOrderButton.Text = "Start a new order here!";
             this.NewOrderButton.UseVisualStyleBackColor = true;
             this.NewOrderButton.Click += new System.EventHandler(this.NewOrderButton_Click);
             // 
             // SavedOrderButton
             // 
-            this.SavedOrderButton.Location = new System.Drawing.Point(243, 464);
+            this.SavedOrderButton.Location = new System.Drawing.Point(243, 424);
             this.SavedOrderButton.Name = "SavedOrderButton";
             this.SavedOrderButton.Size = new System.Drawing.Size(249, 35);
             this.SavedOrderButton.TabIndex = 0;
@@ -57,7 +58,7 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(243, 505);
+            this.ExitButton.Location = new System.Drawing.Point(243, 465);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(249, 35);
             this.ExitButton.TabIndex = 0;
@@ -67,7 +68,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(243, 118);
+            this.pictureBox1.Image = global::assignment5.Properties.Resources.dollar;
+            this.pictureBox1.Location = new System.Drawing.Point(243, 112);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 223);
             this.pictureBox1.TabIndex = 1;
@@ -79,12 +81,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.SavedOrderButton);
             this.Controls.Add(this.NewOrderButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
             this.Name = "StartForm";
