@@ -29,8 +29,8 @@ namespace assignment5.Views
         private void SplashTimer_Tick(object sender, EventArgs e)
         {
             SplashTimer.Enabled = false;
-            this.Hide();
             Program.startForm.Show();
+            this.Hide();
         }
     }
 }

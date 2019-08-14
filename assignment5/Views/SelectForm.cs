@@ -29,8 +29,8 @@ namespace assignment5.Views
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Program.productForm.Show();
+            this.Hide();
         }
 
         private void SelectForm_Load(object sender, EventArgs e)
@@ -41,5 +41,22 @@ namespace assignment5.Views
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
 
         }
+        
+
+        private void ProductDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var currentCell = ProductDataGridView.CurrentCell;
+            var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
+            var currentRow = ProductDataGridView.Rows[rowIndex];
+            var columnCOunt = ProductDataGridView.ColumnCount;
+            var cells = currentRow.Cells;
+
+            currentRow.Selected = true;
+            string outputStirng = string.Empty;
+
+            outputStirng = cells[2].Value + " " + cells[3].Value + " $" + cells[1].Value;
+            SelectComputerTextBox.Text = outputStirng;
+        }
+        
     }
 }

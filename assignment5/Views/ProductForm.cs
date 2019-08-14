@@ -20,5 +20,10 @@ namespace assignment5.Views
         {
             InitializeComponent();
         }
+
+        private void ProductForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

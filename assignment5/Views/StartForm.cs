@@ -34,8 +34,8 @@ namespace assignment5.Views
 
         private void SavedOrderButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Program.productForm.Show();
+            this.Hide();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
