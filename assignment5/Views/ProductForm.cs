@@ -25,5 +25,26 @@ namespace assignment5.Views
         {
             Application.Exit();
         }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            Program.orderForm.Show();
+            this.Hide();
+        }
+
+        private void ProductForm_Load(object sender, EventArgs e)
+        {
+            NextButton.Enabled = false;
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

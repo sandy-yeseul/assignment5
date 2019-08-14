@@ -39,7 +39,7 @@ namespace assignment5.Views
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
-
+            NextButton.Enabled = false;
         }
         
 
@@ -56,6 +56,8 @@ namespace assignment5.Views
 
             outputStirng = cells[2].Value + " " + cells[3].Value + " $" + cells[1].Value;
             SelectComputerTextBox.Text = outputStirng;
+            NextButton.Enabled = true;
+
         }
         
     }
