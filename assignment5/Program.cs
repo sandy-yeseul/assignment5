@@ -1,8 +1,10 @@
-﻿using System;
+﻿using assignment5.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using assignment5.Views;
 /*
  * Yeseul Kang #301029474
  * Created on August 13
@@ -12,11 +14,13 @@ namespace assignment5
 {
     static class Program
     {
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         /// 
 
+        public static Product product;
         public static SplashScreenForm splashScreen;
         public static StartForm startForm;
         public static SelectForm selectForm;
@@ -32,6 +36,7 @@ namespace assignment5
             selectForm = new SelectForm();
             productForm = new ProductForm();
             orderForm = new OrderForm();
+            product = new Product();
             Application.Run(splashScreen);
         }
     }

@@ -7,30 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Linq;
 /*
  * Yeseul Kang #301029474
  * Created on August 13
- * Select Form
+ * Splash page
  */
-namespace assignment5
+namespace assignment5.Views
 {
-    public partial class SelectForm : Form
+    public partial class SplashScreenForm : Form
     {
-        public SelectForm()
+        public SplashScreenForm()
         {
             InitializeComponent();
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void SplashScreenForm_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+            SplashTimer.Enabled = true;
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
+        private void SplashTimer_Tick(object sender, EventArgs e)
         {
+            SplashTimer.Enabled = false;
             this.Hide();
-            Program.productForm.Show();
+            Program.startForm.Show();
         }
     }
 }

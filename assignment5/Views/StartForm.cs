@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Created on August 13
  * Start Form
  */
-namespace assignment5
+namespace assignment5.Views
 {
     public partial class StartForm : Form
     {
