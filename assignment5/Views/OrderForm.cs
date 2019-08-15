@@ -73,20 +73,20 @@ namespace assignment5.Views
             PlatformTextBox.Text = Program.dataList[16];
             CondtionTextBox.Text = Program.dataList[14];
 
-            PriceTextBox.Text = Program.dataList[1];
+            PriceTextBox.Text = "$" + Program.dataList[1];
 
             string Specs = Program.dataList[7]
-                + $"\n" + Program.dataList[15]
-                + $"\n" + Program.dataList[6]
-                + $"\n" + Program.dataList[9]
-                + $"\n" + Program.dataList[10]
-                + $"\n" + Program.dataList[11]
-                + $"\n" + Program.dataList[12]
-                + $"\n" + Program.dataList[13]
-                + $"\n" + Program.dataList[4]
-                + $"\n" + Program.dataList[5]
-                + $"\n" + Program.dataList[17]
-                + $"\n" + Program.dataList[18];
+                + $"\r\n " + Program.dataList[15]
+                + $"\r\n " + Program.dataList[6]
+                + $"\r\n " + Program.dataList[9]
+                + $"\r\n " + Program.dataList[10]
+                + $"\r\n " + Program.dataList[11]
+                + $"\r\n " + Program.dataList[12]
+                + $"\r\n " + Program.dataList[13]
+                + $"\r\n " + Program.dataList[4]
+                + $"\r\n " + Program.dataList[5]
+                + $"\r\n " + Program.dataList[17]
+                + $"\r\n " + Program.dataList[18];
 
             SpecsTextBox.Text = Specs;
         }
