@@ -76,10 +76,14 @@ namespace assignment5.Views
                         {
                             listOfData.Add(inputStream.ReadLine());
                         }
-                        Program.dataList = listOfData;
+                        
                         // cleanup
                         inputStream.Close();
                         inputStream.Dispose();
+
+                        //fill the blank
+                        Program.dataList = listOfData;
+                        FillBlank();
                     }
                     
                 }
@@ -135,10 +139,11 @@ namespace assignment5.Views
                 }
             }
         }
-        private void FillBlank()
+        public  void FillBlank()
         {
-            if (Program.dataList != null)
+            if (Program.dataList.Count > 0)
             {
+                //fill the blank
                 ProductIdDataTextBox.Text = Program.dataList[0];
                 ModelTextBox.Text = Program.dataList[3];
                 ManufacTextBox.Text = Program.dataList[2];
@@ -160,7 +165,79 @@ namespace assignment5.Views
                 GpuTypeTextBox.Text = Program.dataList[19];
                 ResolutionTextBox.Text = Program.dataList[8];
                 WebCamTextBox.Text = Program.dataList[30];
+
+                //Enable next button
+                NextButton.Enabled = true;
             }
+            else
+            {
+                //automatically open a open file diaolog to open the file
+                OpenFileDialog ProductFile = new OpenFileDialog();
+                ProductFile.FileName = "Product.txt";
+                ProductFile.InitialDirectory = Directory.GetCurrentDirectory();
+                ProductFile.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+                // open the file dialog
+                var result = ProductFile.ShowDialog();
+                if (result != DialogResult.Cancel)
+                {
+                    try
+                    {
+                        // Open the  streawm for reading
+                        using (StreamReader inputStream = new StreamReader(
+                            File.Open(ProductFile.FileName, FileMode.Open)))
+                        {
+                            List<string> listOfData = new List<string>();
+                            // read from the file
+                            for (int i = 0; i < 31; i++)
+                            {
+                                listOfData.Add(inputStream.ReadLine());
+                            }
+
+                            // cleanup
+                            inputStream.Close();
+                            inputStream.Dispose();
+
+                            //fill the blank
+                            Program.dataList = listOfData;
+                            FillBlank();
+                        }
+
+                    }
+                    catch (IOException exception)
+                    {
+
+                        Debug.WriteLine("ERROR: " + exception.Message);
+
+                        MessageBox.Show("ERROR: " + exception.Message, "ERROR",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (FormatException exception)
+                    {
+                        Debug.WriteLine("ERROR: " + exception.Message);
+
+                        MessageBox.Show("ERROR: " + exception.Message + "\n\nPlease select the appropriate file type", "ERROR",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// This is evne handler to re-open Select Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AnotherProductButon_Click(object sender, EventArgs e)
+        {
+            Program.selectForm.Show();
+            this.Hide();
+            Program.dataList.Clear();
+        }
+        
+
+        private void ProductForm_Shown(object sender, EventArgs e)
+        {
+            FillBlank();
         }
     }
 }

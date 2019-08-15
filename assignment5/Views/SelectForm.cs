@@ -31,6 +31,7 @@ namespace assignment5.Views
         {
             Program.productForm.Show();
             this.Hide();
+            Program.productForm.FillBlank();
         }
 
         private void SelectForm_Load(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace assignment5.Views
             SelectComputerTextBox.Text = outputStirng;
             NextButton.Enabled = true;
 
-            Program.FormState.PreviousPage = this;
+            
             for(int i = 0; i < columnCOunt; i++)
             {
                 Program.dataList.Add(cells[i].Value.ToString());
