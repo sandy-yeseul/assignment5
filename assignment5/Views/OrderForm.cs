@@ -72,9 +72,7 @@ namespace assignment5.Views
             ManufacTextBox.Text = Program.dataList[2];
             PlatformTextBox.Text = Program.dataList[16];
             CondtionTextBox.Text = Program.dataList[14];
-
-            PriceTextBox.Text = "$" + Program.dataList[1];
-
+            
             string Specs = Program.dataList[7]
                 + $"\r\n " + Program.dataList[15]
                 + $"\r\n " + Program.dataList[6]
@@ -86,9 +84,18 @@ namespace assignment5.Views
                 + $"\r\n " + Program.dataList[4]
                 + $"\r\n " + Program.dataList[5]
                 + $"\r\n " + Program.dataList[17]
-                + $"\r\n " + Program.dataList[18];
-
+                + $"\r\n " + Program.dataList[18]
+                  + $"\r\n " + Program.dataList[19]
+                    + $"\r\n " + Program.dataList[8]
+                      + $"\r\n " + Program.dataList[30];
+            
             SpecsTextBox.Text = Specs;
+
+            PriceTextBox.Text = "$" + Program.dataList[1];
+            double tax = (Convert.ToDouble(Program.dataList[1]))*0.13;
+            double total = (Convert.ToDouble(Program.dataList[1]))+tax;
+            TaxTextBox.Text = "$"+tax;
+            TotalPriceTextBox.Text = "$"+total;
         }
     }
 }
