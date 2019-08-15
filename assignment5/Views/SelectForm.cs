@@ -40,7 +40,9 @@ namespace assignment5.Views
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
             NextButton.Enabled = false;
+            
         }
+
         
 
         private void ProductDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -58,6 +60,11 @@ namespace assignment5.Views
             SelectComputerTextBox.Text = outputStirng;
             NextButton.Enabled = true;
 
+            Program.FormState.PreviousPage = this;
+            for(int i = 0; i < columnCOunt; i++)
+            {
+                Program.dataList.Add(cells[i].Value.ToString());
+            }
         }
         
     }
