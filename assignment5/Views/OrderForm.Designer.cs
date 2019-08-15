@@ -101,8 +101,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -116,8 +117,9 @@
             // 
             this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
             this.BackToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.BackToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.BackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.BackToolStripMenuItem.Text = "&Back";
+            this.BackToolStripMenuItem.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -196,8 +198,9 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // ModelLabel
             // 
@@ -474,6 +477,7 @@
             this.BackButton.TabIndex = 3;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // CancelButton
             // 
@@ -483,6 +487,7 @@
             this.CancelButton.TabIndex = 3;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // FinishButton
             // 
@@ -492,6 +497,7 @@
             this.FinishButton.TabIndex = 3;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
+            this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
             // OrderForm
             // 
@@ -513,6 +519,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OrderForm_FormClosed);
             this.OrderMenuStrip.ResumeLayout(false);
             this.OrderMenuStrip.PerformLayout();
             this.ComputerInfoGroupBox.ResumeLayout(false);

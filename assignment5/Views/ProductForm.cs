@@ -32,6 +32,7 @@ namespace assignment5.Views
         {
             Program.orderForm.Show();
             this.Hide();
+            Program.orderForm.FillBlank();
         }
 
         private void ProductForm_Load(object sender, EventArgs e)
