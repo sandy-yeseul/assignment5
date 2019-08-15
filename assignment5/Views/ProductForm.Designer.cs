@@ -501,7 +501,7 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -535,7 +535,7 @@
             this.SelectAnotherProjectToolStripMenuItem.Name = "SelectAnotherProjectToolStripMenuItem";
             this.SelectAnotherProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.SelectAnotherProjectToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.SelectAnotherProjectToolStripMenuItem.Text = "Select Another Project";
+            this.SelectAnotherProjectToolStripMenuItem.Text = "Se&lect Another Project";
             this.SelectAnotherProjectToolStripMenuItem.Click += new System.EventHandler(this.AnotherProductButon_Click);
             // 
             // ProductIdLabel

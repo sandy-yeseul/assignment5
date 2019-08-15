@@ -26,10 +26,7 @@ namespace assignment5
         public static SelectForm selectForm;
         public static ProductForm productForm;
         public static OrderForm orderForm;
-        public static class FormState
-        {
-            public static Form PreviousPage;
-        }
+        public static AboutBox aboutBox;
 
         //Created list to save the data of the datagridview
         public static List<string> dataList = new List<string>();
@@ -45,8 +42,8 @@ namespace assignment5
             productForm = new ProductForm();
             orderForm = new OrderForm();
             product = new Product();
+            aboutBox = new AboutBox();
             Application.Run(splashScreen);
-            dataList.Clear();
         }
     }
 }

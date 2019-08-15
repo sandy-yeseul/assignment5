@@ -20,5 +20,10 @@ namespace assignment5.Views
         {
             InitializeComponent();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutBox.ShowDialog();
+        }
     }
 }
